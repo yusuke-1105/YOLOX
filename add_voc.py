@@ -1,6 +1,7 @@
 import random
+import sys
 
-dir='BDD/ImageSets/Main'
+dir=f'{sys.argv[1]}/ImageSets/Main'
 with open(f'{dir}/default.txt', 'r') as f:
     img_name = [s.strip() for s in f.readlines()]
 
