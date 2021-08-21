@@ -164,8 +164,10 @@ class VOCEvaluator:
         nms_time = statistics[1].item()
         n_samples = statistics[2].item()
 
-        a_infer_time = 1000 * inference_time / (n_samples * self.dataloader.batch_size)
-        a_nms_time = 1000 * nms_time / (n_samples * self.dataloader.batch_size)
+        try: a_infer_time = 1000 * inference_time / (n_samples * self.dataloader.batch_size)
+        except ZeroDivisionError: a_infer_time = 0
+        try: a_nms_time = 1000 * nms_time / (n_samples * self.dataloader.batch_size)
+        except ZeroDivisionError: a_nms_time = 0
 
         time_info = ", ".join(
             [
