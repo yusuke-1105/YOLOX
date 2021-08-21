@@ -35,6 +35,7 @@ with open(f'{dir}/val.txt', mode='w') as f:
 
 with open(f'{dir}/trainval.txt', mode='w') as f:
     f.write('\n'.join(train_name))
+    f.write('\n')
     f.write('\n'.join(val_name))
 
 print("train size:", len(train_name))
