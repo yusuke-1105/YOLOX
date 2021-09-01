@@ -1,5 +1,5 @@
 This repo is available in [English](README_EN.md).  
-これは[CVATとYOLOXで機械学習やってみた(近日公開)]()で使用しているレポジトリです．  
+**これは[CVATとYOLOXで機械学習やってみた(近日公開)]()で使用しているレポジトリです．**  
 
 <div align="center"><img src="assets/logo.png" width="350"></div>
 
@@ -15,7 +15,7 @@ YOLOXはYOLOのアンカーフリーバージョンで，よりシンプルで�
 
 <img src="assets/cvat_annotation.png" >  
 
-あらかじめ用意していたデータベースからシステムが画像におけるメタデータを，自動で付与してくれる自動アノテーション機能を提供している無料のツールです．CVATでは自動アノテーションをAIで実現しており，yoloといったモデルを使用して，自動で画像や動画のアノテーションを行なってくれます．**このレポジトリではCVATから生成したPASCAL VOC 1.1 データセットを使用します．**  
+あらかじめ用意していたデータベースからシステムが画像におけるメタデータを自動で付与してくれる,自動アノテーション機能を提供している無料のツールです．CVATでは自動アノテーションをAIで実現しており，yoloといったモデルを使用して自動で画像や動画のアノテーションを行なってくれます．**このレポジトリではCVATから生成したPASCAL VOC 1.1 データセットを使用します．**  
 CVATのセットアップや使用方法はQiitaの[CVATの自動アノテーション機能を使ってみた](https://qiita.com/yusuke-1105/items/8375eff45054197caf96)を参照してください．
   
 ## Components  
@@ -236,9 +236,7 @@ python tools/eval.py -n  yolox-s -c yolox_s.pth.tar -b 1 -d 1 --conf 0.001 --fp1
 * YOLOX ONNXRuntime C++ Demo: [lite.ai](https://github.com/DefTruth/lite.ai/blob/main/ort/cv/yolox.cpp) from [DefTruth](https://github.com/DefTruth)
 
 ### Cite YOLOX  
-> YOLOXを研究に使用する場合は、以下のBibTeXエントリを使用して引用してください。
-
-> If you use YOLOX in your research, please cite the Megvii Team's work by using the following BibTeX entry:
+YOLOXを研究に使用する場合は、以下のBibTeXエントリを使用して引用してください。
 
 ```latex
  @article{yolox2021,
