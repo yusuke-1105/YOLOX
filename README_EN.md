@@ -31,7 +31,7 @@ For more information on how to set up and use CVAT, please refer to [CVATの自�
 Basically, if you run it with Google Colab, the process from training to validation will be completed, but you may need to change some part of the notebook.    
 
 <details>
-<summary>データセットのダウンロード / Download your Dataset (cell 26)</summary>  
+<summary>データセットのダウンロード / Download your Dataset</summary>  
 
 Download your dataset from CVAT. Use the "Open Task" --> "Open Job" --> "Menu (hamburger button)" --> "Export as a dataset" --> "**PASCAL VOC 1.1**" export format.  
 Upload the exported zip file to DropBox, etc., and write the shared link in the following "URL". Alternatively, upload the file to the default directory of Google Colab (the directory where sample_data is located). The file name should be converted to `BDD.zip`, and `!curl -L "URL" > BDD.zip` should be commented out.
@@ -39,7 +39,7 @@ Upload the exported zip file to DropBox, etc., and write the shared link in the 
 
 
 <details>
-<summary>クラス名の変更 / Change the Classes (cell 52)</summary>  
+<summary>クラス名の変更 / Change the Classes</summary>  
 Make sure you change the classes based on what your dataset. To ensure that the training process will function as intended, write the classes in lowercase with no whitespace.  
 
 ```notebook  
@@ -55,7 +55,7 @@ CLASSES = (
 </details>  
 
 <details>
-<summary>トレーニング済みの重みファイルをダウンロード / Download Pretrained Weights (cell 56)</summary>  
+<summary>トレーニング済みの重みファイルをダウンロード / Download Pretrained Weights</summary>  
 Please change the link to download the latest trained model as appropriate. It should work fine by default.    
 
 ```notebook  
@@ -64,7 +64,7 @@ Please change the link to download the latest trained model as appropriate. It s
 </details>  
 
 <details>
-<summary>トレーニング / Train the Model (cell 69)</summary>  
+<summary>トレーニング / Train the Model</summary>  
 Change the number of EPOCH_NUM as you need.  
 
 ```notebook
@@ -74,7 +74,7 @@ EPOCH_NUM = 150
 
 
 <details>
-<summary>モデルをテストする / Test the Model (cell )</summary>  
+<summary>モデルをテストする / Test the Model</summary>  
 Change the test image as you need.  
 
 ```notebook  
@@ -83,7 +83,7 @@ TEST_IMAGE_PATH = "/content/drive/MyDrive/YOLOX-s/IMG.jpg"
 </details>  
 
 <details>
-<summary>トレーニング済みモデルをGoogle Driveにエクスポートする / Export Trained Weights to Your Google Drive (cell )</summary>  
+<summary>トレーニング済みモデルをGoogle Driveにエクスポートする / Export Trained Weights to Your Google Drive</summary>  
 The following is specified as the copy destination for the model, but you can change it.  
 
 ```notebook  
@@ -255,4 +255,5 @@ YOLOX is distributed under the Apache License 2.0.
 
 # references  
 - [Megvii-BaseDetection/YOLOX](https://github.com/Megvii-BaseDetection/YOLOX#benchmark)  
-- [roboflow-ai/YOLOX](https://github.com/roboflow-ai/YOLOX)
+- [roboflow-ai/YOLOX](https://github.com/roboflow-ai/YOLOX)  
+- [How to Train YOLOX On a Custom Dataset](https://blog.roboflow.com/how-to-train-yolox-on-a-custom-dataset/)

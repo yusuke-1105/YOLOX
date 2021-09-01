@@ -30,7 +30,7 @@ CVATのセットアップや使用方法はQiitaの[CVATの自動アノテーシ
 ## How to Use CVATDatasets_ML.ipynb?  
 基本的にGoogle Colabで実行すると，学習->検証までのプロセスが完了しますが，一部変更する必要があるので，適宜変更して下さい．  
 <details>
-<summary>データセットのダウンロード / Download your Dataset (cell 26)</summary>  
+<summary>データセットのダウンロード / Download your Dataset</summary>  
 
 CVATのデータセットをダウンロードします．"Open Task" --> "Open Job" --> "Menu (ハンバーガーメニュー)" --> "Export as a dataset" --> "**PASCAL VOC 1.1**"のエクスポート形式を使用してください．  
 エクスポートしたzipファイルをDropBox等にアップし，共有リンクを以下の"URL"に記述してください．あるいは，Google Colabの初期設定のディレクトリ(sample_dataがあるディレクトリ)にアップしてください．その際ファイル名は`BDD.zip`に変換し，`!curl -L "URL" > BDD.zip`はコメントアウトして下さい．
@@ -39,7 +39,7 @@ CVATのデータセットをダウンロードします．"Open Task" --> "Open 
 
 
 <details>
-<summary>クラス名の変更 / Change the Classes (cell 52)</summary>  
+<summary>クラス名の変更 / Change the Classes</summary>  
 データセットのラベルに応じて，クラス名を変更するようにしてください．トレーニングプロセスが正しく機能するように，クラス名は小文字で書き，空白を入れないようにしてください．  
 
 ```notebook  
@@ -55,7 +55,7 @@ CLASSES = (
 </details>  
 
 <details>
-<summary>トレーニング済みの重みファイルをダウンロード / Download Pretrained Weights (cell 56)</summary>  
+<summary>トレーニング済みの重みファイルをダウンロード / Download Pretrained Weights</summary>  
 適宜，最新のトレーニング済みモデルをダウンロードのリンクに変更して下さい．ただデフォルトでもしっかり機能するはずです．  
 
 ```notebook  
@@ -64,7 +64,7 @@ CLASSES = (
 </details>  
 
 <details>
-<summary>トレーニング / Train the Model (cell 69)</summary>  
+<summary>トレーニング / Train the Model</summary>  
 適宜，エポック数を変更して下さい．  
 
 ```notebook
@@ -74,7 +74,7 @@ EPOCH_NUM = 150
 
 
 <details>
-<summary>モデルをテストする / Test the Model (cell )</summary>  
+<summary>モデルをテストする / Test the Model</summary>  
 適宜，テスト画像を変更して下さい．
 
 ```notebook  
@@ -83,7 +83,7 @@ TEST_IMAGE_PATH = "/content/drive/MyDrive/YOLOX-s/IMG.jpg"
 </details>  
 
 <details>
-<summary>トレーニング済みモデルをGoogle Driveにエクスポートする / Export Trained Weights to Your Google Drive (cell )</summary>  
+<summary>トレーニング済みモデルをGoogle Driveにエクスポートする / Export Trained Weights to Your Google Drive</summary>  
 モデルのコピー先として以下を指定していますが，適宜変更して下さい．  
 
 ```notebook  
@@ -255,4 +255,5 @@ YOLOXは、Apache License 2.0のライセンスに基づいて配布されてい
 
 # references  
 - [Megvii-BaseDetection/YOLOX](https://github.com/Megvii-BaseDetection/YOLOX#benchmark)  
-- [roboflow-ai/YOLOX](https://github.com/roboflow-ai/YOLOX)
+- [roboflow-ai/YOLOX](https://github.com/roboflow-ai/YOLOX)  
+- [How to Train YOLOX On a Custom Dataset](https://blog.roboflow.com/how-to-train-yolox-on-a-custom-dataset/)
